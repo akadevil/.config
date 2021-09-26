@@ -1,0 +1,3 @@
+red=`tput setaf 1;`
+green=`tput setaf 2; tput bold;`
+reset=`tput sgr0;`

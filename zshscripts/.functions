@@ -1,0 +1,40 @@
+function topen() {
+  touch $1 && open $1
+}
+
+function tpast() {
+  touch $1 && pbpaste >> $1
+}
+
+function nclean() {
+  rm -rf node_modules
+}
+
+function printg() {
+  echo "${green}$1${reset}"
+}
+
+function printr() {
+  echo "${red}$1${reset}"
+}
+
+function update_alacritty() {
+  cd ~/alacritty
+  git reset --hard
+  printg "Update from master..."
+  git pl
+  printg "Make app..."
+  make app
+  printg "Remove the old app version..."
+  rm -rf /Applications/Alacritty.app/
+  printg "Copy new build into apps dir..."
+  cp -r target/release/osx/Alacritty.app /Applications/
+}
+
+function dev() {
+  tmux new -s dev-session
+  tmux split-window -v
+  tmux split-window -h
+  tmux new-window 'mutt'
+  tmux -2 attach-session -d
+}
