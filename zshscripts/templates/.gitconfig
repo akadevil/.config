@@ -1,0 +1,16 @@
+[user]
+  email = {email}
+  name = {name}
+[alias]
+  co = checkout
+  ci = commit
+  st = status
+  res = reset --hard
+  ps = push
+  pl = pull
+  ft = fetch --all
+  ap = add -p
+  cp = cherry-pick
+  latest = describe
+[core]
+    editor = 'code' --wait

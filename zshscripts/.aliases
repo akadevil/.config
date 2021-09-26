@@ -1,0 +1,8 @@
+alias cls='clear'
+alias nv='node -v'
+alias config='code ~/.zshrc'
+alias reload='source ~/.zshrc'
+alias gitconf='code ~/.gitconfig'
+alias hla='ls -hla'
+alias gi='go install'
+alias gb='go build'
