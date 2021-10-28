@@ -1,3 +1,5 @@
+#!/bin/bash
+
 alias cls='clear'
 alias nv='node -v'
 alias config='code ~/.zshrc'
