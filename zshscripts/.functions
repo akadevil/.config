@@ -8,7 +8,7 @@ function tpast() {
   touch $1 && pbpaste >> $1
 }
 
-function nclean() {
+function rmod() {
   rm -rf node_modules
 }
 
@@ -20,17 +20,29 @@ function printr() {
   echo "${red}$1${reset}"
 }
 
+# function docg() {
+#   ...
+# }
+
 function update_alacritty() {
   cd ~/alacritty
   git reset --hard
   printg "Update from master..."
   git pl
-  printg "Make app..."
+  printg "Building..."
   make app
-  printg "Remove the old app version..."
+  printg "Removing the old version..."
   rm -rf /Applications/Alacritty.app/
   printg "Copy new build into apps dir..."
   cp -r target/release/osx/Alacritty.app /Applications/
+  open /Applications/Alacritty.app
+  printg "Done, closing in 3 sec..."
+  sleep 3 && exit
+}
+
+function bld() {
+  # TODO refactor for more dynamic usage
+  cat ~/.config/zshscripts/templates/.zshrc | tee ~/.zshrc
 }
 
 function dev() {

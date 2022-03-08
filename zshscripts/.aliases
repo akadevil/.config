@@ -2,9 +2,13 @@
 
 alias cls='clear'
 alias nv='node -v'
+alias settings='code ~/.zshrc & code ~/.config/'
+alias cdc='cd ~/.config/'
 alias config='code ~/.zshrc'
 alias reload='source ~/.zshrc'
 alias gitconf='code ~/.gitconfig'
 alias hla='ls -hla'
 alias gi='go install'
 alias gb='go build'
+alias rmf="rm -rf"
+alias bi="bundle install"
