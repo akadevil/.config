@@ -20,10 +20,6 @@ function printr() {
   echo "${red}$1${reset}"
 }
 
-# function docg() {
-#   ...
-# }
-
 function update_alacritty() {
   cd ~/alacritty
   git reset --hard
@@ -40,7 +36,7 @@ function update_alacritty() {
   sleep 3 && exit
 }
 
-function bld() {
+function build() {
   # TODO refactor for more dynamic usage
   cat ~/.config/zshscripts/templates/.zshrc | tee ~/.zshrc
 }
