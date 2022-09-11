@@ -7,10 +7,10 @@ source $(brew --prefix nvm)/nvm.sh
 export GOHOME=$HOME/go
 export GOPATH=$HOME/go/bin
 
+printg "Executing .cargo..."
+source $HOME/.cargo/env
+
 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
 export PATH="$PATH:$HOME/.rvm/bin"
 printg "Executing .rvm..."
 source ~/.rvm/scripts/rvm
-
-printg "Executing .cargo..."
-source $HOME/.cargo/env

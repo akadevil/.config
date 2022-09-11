@@ -103,7 +103,13 @@ scrolling:
 # Font configuration
 font:
   # Normal (roman) font face
-  # normal:
+  normal:
+    family: "Space Mono for Powerline"
+    style: Regular
+    family: "Roboto Mono for Powerline"
+    style: Bold
+    # family: "Space Mono for Powerline"
+    # style: Italic
     # Font family
     #
     # Default:

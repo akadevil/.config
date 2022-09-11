@@ -20,22 +20,6 @@ function printr() {
   echo "${red}$1${reset}"
 }
 
-function update_alacritty() {
-  cd ~/alacritty
-  git reset --hard
-  printg "Update from master..."
-  git pl
-  printg "Building..."
-  make app
-  printg "Removing the old version..."
-  rm -rf /Applications/Alacritty.app/
-  printg "Copy new build into apps dir..."
-  cp -r target/release/osx/Alacritty.app /Applications/
-  open /Applications/Alacritty.app
-  printg "Done, closing in 3 sec..."
-  sleep 3 && exit
-}
-
 function build() {
   # TODO refactor for more dynamic usage
   cat ~/.config/zshscripts/templates/.zshrc | tee ~/.zshrc

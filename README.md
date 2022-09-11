@@ -1,7 +1,55 @@
 # .config
 My config shit in one place
 
-Install the repo in the root directory or check if the config repo path is correct in `build` function
+Use setup.sh scripts to automate or follow the commands below to setup everything manually.
+*Commands are tested on mac os only*
+```
+zsh setup.sh
+```
+*`*run srcipt using zsh to avoid zplug errors`*
 
-1. copy the scripts from `templates/.zshrc` to your `.zshrc` file
-2. run `source ~/.zshrc`
+
+**Install `ohmyzsh`**
+
+```
+brew install zsh
+```
+
+**make it default shell**
+
+```
+chsh -s /usr/local/bin/zsh
+```
+
+**Install `nvm`**
+```
+brew update
+brew install nvm
+[ ! -d "~/.nvm" ] && mkdir ~/.nvm
+```
+
+**Copy the scripts from `templates/.zshrc` to your `.zshrc` file**
+
+```
+touch ~/.zshrc
+pbcopy < ~/.config/zshscripts/templates/.zshrc
+pbpaste > ~/.zshrc
+```
+
+**Install `Zplug`**
+
+```
+brew install zplug
+```
+
+**After the dependencies are installed run**
+
+```
+source ~/.zshrc
+```
+
+**Install `Alacritty`**
+
+```
+brew install --cask alacritty
+```
