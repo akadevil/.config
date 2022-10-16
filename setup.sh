@@ -24,6 +24,11 @@ echo "installing git aliases"
 pbcopy < ~/.config/zshscripts/templates/.gitconfig
 pbpaste > ~/.gitconfig
 
+echo "install tmux config template"
+[ ! -d "~/.tmux.conf" ] && touch ~/.tmux.conf
+pbcopy < ~/.config/zshscripts/templates/.tmux.conf && pbpaste > ~/.tmux.conf
+
+
 echo "installing zplug"
 brew reinstall zplug
 

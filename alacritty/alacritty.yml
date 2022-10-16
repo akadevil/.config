@@ -338,7 +338,7 @@ schemes:
   #     white:   '#f8f8f8'
 
 colors: *tokyo-night-storm
-# colors: *tokyo-night
+colors: *tokyo-night
 # colors: *space-ship
 
 
