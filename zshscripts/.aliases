@@ -2,7 +2,7 @@
 
 alias cls='clear'
 alias nv='node -v'
-alias conf='code ~/.zshrc & code ~/.config/'
+alias conf='code ~/.config/'
 alias config='code ~/.zshrc'
 alias cdc='cd ~/.config/'
 alias reload='source ~/.zshrc'
@@ -13,7 +13,6 @@ alias gb='go build'
 alias rmf="rm -rf"
 alias bi="bundle install"
 alias treload="pbcopy < ~/.config/zshscripts/templates/.tmux.conf && pbpaste > ~/.tmux.conf"
-alias cb="cargo build"
+alias cb="cargo build && c clippy"
 alias c="cargo run"
 alias ct="cargo test"
-
