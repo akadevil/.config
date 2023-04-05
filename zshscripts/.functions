@@ -34,13 +34,19 @@ function dev() {
 }
 
 function tat {
-  name=$(basename `pwd` | sed -e 's/\.//g')
+  session="work"
+  # set up tmux
+  tmux start-server
+  # create a new tmux session
+  tmux new-session -d -s $session
+  # split pane 1 horizontally by 50%
+  tmux splitw -h -p 50
+  # split pane 2 vertically by 50%
+  tmux splitw -v -p 50
+  # Select and split pane 1 vertically by 50%
+  tmux selectp -t 1
+  tmux splitw -v -p 50
 
-  if tmux ls 2>&1 | grep "$name"; then
-    tmux attach -t "$name"
-  elif [ -f .envrc ]; then
-    direnv exec / tmux new-session -s "$name"
-  else
-    tmux new-session -s "$name"
-  fi
+  # Finished setup, attach to the tmux session!
+  tmux attach-session -t $session
 }

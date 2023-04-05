@@ -1,16 +1,12 @@
 [user]
-  email = {email}
-  name = {name}
-[alias]
-  co = checkout
-  ci = commit
-  st = status
-  res = reset --hard
-  ps = push
-  pl = pull
-  ft = fetch --all
-  ap = add -p
-  cp = cherry-pick
-  latest = describe
+  email = nare.zakaryanmm@gmail.com
+  name = Nare
 [core]
     editor = 'code' --wait
+[init]
+	defaultBranch = main
+[push]
+	autoSetupRemote = true
+	default = current
+[remote]
+	pushDefault = origin
