@@ -4,3 +4,4 @@
 !zshscripts/*/*
 !alacritty
 !.tmux*
+!brew_formulas.sh
