@@ -1,5 +1,6 @@
 *
-!zshscripts
+!*/
+
+!zshscripts/*/*
 !alacritty
-!aliases
-!setup.sh
+!.tmux*

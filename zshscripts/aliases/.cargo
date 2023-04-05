@@ -1,0 +1,5 @@
+#!/bin/bash
+
+alias cb="cargo build && c clippy"
+alias c="cargo run"
+alias ct="cargo test"

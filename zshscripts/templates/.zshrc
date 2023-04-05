@@ -3,7 +3,7 @@ source ~/.config/zshscripts/.constants
 echo "Injecting functions..."
 source ~/.config/zshscripts/.functions
 printg "Setup aliases..."
-source ~/.config/zshscripts/.aliases
+source ~/.config/zshscripts/aliases/.all
 printg "Load utilities..."
 source ~/.config/zshscripts/.utilities
 printg "Executing zplug libs and plugins..."
