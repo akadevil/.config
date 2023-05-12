@@ -1,5 +1,9 @@
 #!/bin/bash
 
+TMUXPT=$HOME/.config/zshscripts/aliases/.tmux
+CARGOPT=$HOME/.config/zshscripts/aliases/.cargo
+GITPT=$HOME/.config/zshscripts/aliases/.git
+
 alias cls='clear'
 alias nv='node -v'
 alias conf='code ~/.config/'
@@ -7,12 +11,14 @@ alias config='code ~/.zshrc'
 alias cdc='cd ~/.config/'
 alias reload='source ~/.zshrc'
 alias gitconf='code ~/.gitconfig'
-alias hla='ls -hla'
+alias hla='exa --long --header --inode --git -a'
+alias etra='exa -T --icons -a'
 alias gi='go install'
 alias gb='go build'
 alias rmf="rm -rf"
 alias bi="bundle install"
+alias halp="bat ~/.config/zshscripts/aliases/.all $TMUXPT $CARGOPT $GITPT"
 alias treload="pbcopy < ~/.config/zshscripts/templates/.tmux.conf && pbpaste > ~/.tmux.conf"
-source ~/.config/zshscripts/aliases/.tmux
-source ~/.config/zshscripts/aliases/.cargo
-source ~/.config/zshscripts/aliases/.git
+source $TMUXPT
+source $CARGOPT
+source $GITPT

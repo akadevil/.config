@@ -8,5 +8,11 @@ formulas=(
   alfred
   alacritty
   amethyst
+  neovim
+  fontconfig
+  exa
+  bat
+  clx
+  rectangle
   # fig has issues with alacritty, uncomment later
 )

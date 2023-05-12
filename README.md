@@ -32,3 +32,6 @@ zsh setup.sh
 ```
 chsh -s /usr/local/bin/zsh
 ```
+
+### Fonts
+Best font that works with alacritty and nvim lunarvim I found is [RobotoMono](https://github.com/ryanoasis/nerd-fonts/releases/download/v2.3.3/RobotoMono.zip)(link downloads the font instantly)

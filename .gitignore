@@ -5,3 +5,5 @@
 !alacritty
 !.tmux*
 !brew_formulas.sh
+!*.lua
+!zshscripts/aliases/.git
