@@ -49,4 +49,6 @@ do
   brew install $formula
 done
 
+brew install --cask dash
+
 source ~/.zshrc

@@ -4,6 +4,10 @@ TMUXPT=$HOME/.config/zshscripts/aliases/.tmux
 CARGOPT=$HOME/.config/zshscripts/aliases/.cargo
 GITPT=$HOME/.config/zshscripts/aliases/.git
 
+source $TMUXPT
+source $CARGOPT
+source $GITPT
+
 alias cls='clear'
 alias nv='node -v'
 alias conf='code ~/.config/'
@@ -19,6 +23,5 @@ alias rmf="rm -rf"
 alias bi="bundle install"
 alias halp="bat ~/.config/zshscripts/aliases/.all $TMUXPT $CARGOPT $GITPT"
 alias treload="pbcopy < ~/.config/zshscripts/templates/.tmux.conf && pbpaste > ~/.tmux.conf"
-source $TMUXPT
-source $CARGOPT
-source $GITPT
+alias add="code ~/.config/zshscripts/aliases/.all"
+alias copy="pbcopy <"

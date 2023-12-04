@@ -9,6 +9,7 @@ brew install zsh
 
 **Install [ohmyzsh](https://ohmyz.sh/#install)**
 this is required as zplug uses OMZ plugins -> [zplug file](https://github.com/akadevil/.config/blob/main/zshscripts/.zplug)
+
 plugin list is here -> [OMZ plugins](https://github.com/ohmyzsh/ohmyzsh/wiki/Plugins)
 
 ```

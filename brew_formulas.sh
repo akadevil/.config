@@ -14,5 +14,5 @@ formulas=(
   bat
   clx
   rectangle
-  # fig has issues with alacritty, uncomment later
+  pnpm
 )

@@ -1,5 +1,19 @@
 #!/bin/bash
 
+#  TODO: need a generic function that creates
+#  a new alias using add command and then adds it
+#  in aliases .all file
+# function add() {}
+
+function sk() {
+  if [ -z "$1" ]
+  then
+    error "provided ssh keyname is empty"
+  else
+    ssh-add ~/.ssh/$1
+  fi
+}
+
 function topen() {
   touch $1 && open $1
 }
@@ -12,25 +26,18 @@ function rmod() {
   rm -rf node_modules
 }
 
-function printg() {
+function info() {
   echo "${green}$1${reset}"
 }
 
-function printr() {
+function error() {
   echo "${red}$1${reset}"
+  false
 }
 
 function build() {
   # TODO refactor for more dynamic usage
   cat ~/.config/zshscripts/templates/.zshrc | tee ~/.zshrc
-}
-
-function dev() {
-  tmux new -s dev-session
-  tmux split-window -v
-  tmux split-window -h
-  tmux new-window 'mutt'
-  tmux -2 attach-session -d
 }
 
 function tat {
@@ -49,4 +56,8 @@ function tat {
 
   # Finished setup, attach to the tmux session!
   tmux attach-session -t $session
+}
+
+function rapi() {
+  rails new $1 --api --database=postgresql -T
 }
